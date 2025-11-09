@@ -3,9 +3,9 @@
 #include <stdio.h>
 
 
-_Atomic(uint64_t) counter = 0;
+uint64_t counter = 0;
 // 1. mutex
-// 2. atomic
+// 2. atomic: _Atomic(uint64_t)
 
 void* thread_routine(void* void_args) {
   for (size_t i = 0; i < 1000000; ++i) {
